@@ -1,0 +1,124 @@
+<DOCTYPE! HTML>
+<html>
+
+<head>
+	<style>
+	#Example1 {
+	background-color:yellow;
+	font-size:10pt;
+	}
+	</style>
+</head>
+
+<body>
+<!-- Example 1 code --------------------------------------------------------------------------->
+<div id="Example1">
+	<h1>Example 1</h1>
+	Here is the code of the function created for Example1.  <br>
+
+	function ChangeColor() {  <br>
+		document.getElementById("Example1").style.backgroundColor="red";  <br>
+		document.getElementById("Example1").style.fontSize = "xx-large";   <br>
+							}  <br>
+
+	<br>
+	<button type="button" onclick="ChangeColor()">Change background color and font size</button>
+
+	<script>  <!-- Actual script code.  -->
+	function ChangeColor() {
+		document.getElementById("Example1").style.backgroundColor="red";
+		document.getElementById("Example1").style.fontSize = "xx-large";
+	}
+	</script>
+</div>
+
+<br>
+<br>
+<!-- Example 2 code --------------------------------------------------------------------------->
+<div id="Example2">
+	<h1>Example 2</h1>
+	<p>The if else statements are used in JavaScript as well.  They follow the same syntax as we 
+	studied in Arduino.  </p>
+	if (condition) {  	<br>
+		instruction		<br>
+		instruction		<br>
+		instruction		<br>
+					}	<br>
+	else 			{ 	<br>
+		instruction		<br>
+		instruction		<br>
+		instruction		<br>
+					}	<br>
+
+	<br>
+	<br>
+	<p>  Suppose that you want to randomly generate a number between 1 and 3.  
+	If the computer picks a 2 a window alert box will appear and say you won.
+	Otherwise it will state that you lost and what the number was that it 
+	picked.
+	</p>
+	<br>
+function CheckGuessFunction(){	<br>
+	var guess = (Math.floor(Math.random() * 3) + 1);  //creates a ransom number between 1 and 3 <br> <br>
+	if (guess==2)  {  	<br>
+	window.alert("Congratulations, you won!!");  	<br>
+				}	<br>
+	else  	{		<br>
+	window.alert("Sorry you lost, the computer guessed a "+guess);  <br>
+			}		<br>
+						}	<br>
+
+
+	<script>  <!-- Actual script code.  -->
+	function CheckGuessFunction(){
+		var guess = (Math.floor(Math.random() * 3) + 1);  //creates a ransom number between 1 and 3
+		if (guess==2)  {
+		window.alert("Congratulations, you won!!");  
+					}
+		else  	{
+		window.alert("Sorry you lost, the computer guessed a "+guess);
+				}
+							}
+									
+	</script>
+	<button onclick="CheckGuessFunction()">Click here to see if you won!</button>
+</div>
+<br>
+<br>
+
+<!-- Example 3 code --------------------------------------------------------------------------->
+<div id="Example 3">
+	<h1>Example 3</h1>
+	
+	Username: <input type="text" id="NameBox">  <!-- Code for the input box.  -->
+	<br>
+	<br>
+	var x;		<br>
+	function CheckInfo() {	<br>
+		x=document.getElementById("NameBox").value;	<br>
+		if ( x== "Andrew")  {	<br>
+			window.alert('The username is correct!');	<br>
+			}	<br>
+		else {	<br>
+			window.alert('The username is WRONG!');	<br>
+			}	<br>
+	}	<br>
+	<button onclick="CheckInfo()">Check Username</button>
+
+	<script>  <!-- Actual script code.  -->
+	var x;
+	function CheckInfo() {
+		x=document.getElementById("NameBox").value;
+		if ( x== "Andrew")  {
+			window.alert('The username is correct!');
+			}
+		else {
+			window.alert('The username is WRONG!');
+			}
+	}
+	</script>
+
+</div>
+</body>
+
+</html>
